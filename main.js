@@ -16,12 +16,12 @@ const port = 3000;
 
 app.listen(port, async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/inventory", {
-      serverSelectionTimeoutMS: 30000
-    });
-    console.log("Connected to MongoDB");
-  } catch (error) {
-    console.log(error);
+    await mongoose.connect(
+      "mongodb+srv://utkarshsingh144493:Ew9DyI2WSeu4kpjB@ut-pro.mcagv.mongodb.net/inventory?retryWrites=true&w=majority"
+    );
+    console.log("MongoDB Connected...");
+  } catch (err) {
+    console.error(err.message);
   }
   console.log(`Server is running on http://localhost:${port}`);
 });
