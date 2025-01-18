@@ -6,10 +6,7 @@ const dishSchema = new mongoose.Schema({
         required: true,
     },
     items: [
-        // {
-        //     type: mongoose.Schema.Types.ObjectId,
-        //     ref: "Item",
-        // }
+        
     ],
     imgURL: {
         type: String,
